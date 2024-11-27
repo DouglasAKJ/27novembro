@@ -15,7 +15,7 @@
     <body>
         <div class="text-center mt-4 container col-sm-10 col-md-6">   
             <h1>Digite a senha</h1>
-            <form action="CarolController" method="post" class="validar mt-4" novalidate>
+            <form action="/action_page.php" method="post" class="validar mt-4" novalidate>
                 
                 <input type="hidden" name="pagina" value="login">
                 
@@ -32,6 +32,17 @@
             </form>
 
         </div>
+
+        <script>
+            function validateForm(){
+                let senha = document.getElementByName("senha");
+                if (senha == "27112003"){
+                    return window.location.replace("carol.html");
+                } else {
+                    return window.location.replace("dica.html");
+                }
+            }
+        </script>
 
     </body>
 </html>
